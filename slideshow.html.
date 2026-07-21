@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Memories ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="slideBody">
+
+<audio autoplay loop id="song">
+<source src="assets/music/Duniyaa.mp3" type="audio/mp3">
+</audio>
+
+<div class="slideshow">
+
+<img id="slide"
+src="assets/images/1.jpg">
+
+</div>
+
+<h2 class="caption">
+
+Love You Mera Bachaa ❤️😘
+
+</h2>
+
+<script>
+
+let photos=[
+
+"assets/images/1.jpg",
+
+"assets/images/2.jpg",
+
+"assets/images/3.jpg",
+
+"assets/images/4.jpg",
+
+"assets/images/5.jpg"
+
+];
+
+let i=0;
+
+setInterval(()=>{
+
+i++;
+
+if(i>=photos.length){
+
+i=0;
+
+}
+
+document.getElementById("slide").src=photos[i];
+
+},4000);
+
+</script>
+
+</body>
+</html>
