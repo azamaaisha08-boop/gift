@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="lovePage">
+
+<div class="loveBox">
+
+<h1>Do You Love Me Bachaa? ❤️</h1>
+
+<div class="btns">
+
+<button onclick="yesLove()">
+Yes ❤️
+</button>
+
+<button id="noBtn">
+No 😒
+</button>
+
+</div>
+
+</div>
+
+<audio id="music" src="assets/music/Duniyaa.mp3"></audio>
+
+<script>
+
+let no=document.getElementById("noBtn");
+
+no.addEventListener("touchstart",move);
+
+no.addEventListener("mouseover",move);
+
+function move(){
+
+no.style.position="absolute";
+
+no.style.left=Math.random()*80+"vw";
+
+no.style.top=Math.random()*80+"vh";
+
+}
+
+function yesLove(){
+
+document.getElementById("music").play();
+
+setTimeout(()=>{
+
+window.location.href="slideshow.html";
+
+},2000);
+
+}
+
+</script>
+
+</body>
+
+</html>
