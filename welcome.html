@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Welcome ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="welcome">
+
+<div class="overlay"></div>
+
+<div class="welcomeBox">
+
+<h1 id="typing"></h1>
+
+<p class="loveText">
+
+Aap Meri Duniya Ho ❤️
+
+</p>
+
+<button onclick="nextPage()">
+
+Continue 💖
+
+</button>
+
+</div>
+
+
+<div class="balloon red"></div>
+
+<div class="balloon blue"></div>
+
+<div class="balloon pink"></div>
+
+<div class="balloon yellow"></div>
+
+<div class="balloon purple"></div>
+
+<script>
+
+let text="Welcome Mera Bachaa ❤️ Aapke Liye Kuch Bahut Special Hai...";
+
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(type,80);
+
+}
+
+}
+
+type();
+
+function nextPage(){
+
+window.location.href="cake.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
+.welcome{
+
+background:linear-gradient(135deg,#ff6a88,#ff99ac,#7b2ff7);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.overlay{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.25);
+
+backdrop-filter:blur(4px);
+
+}
+
+.welcomeBox{
+
+position:relative;
+
+z-index:10;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(20px);
+
+padding:35px;
+
+border-radius:25px;
+
+text-align:center;
+
+color:white;
+
+box-shadow:0 10px 40px rgba(0,0,0,.3);
+
+width:90%;
+
+max-width:380px;
+
+}
+
+#typing{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+line-height:42px;
+
+}
+
+.loveText{
+
+font-size:20px;
+
+margin-bottom:30px;
+
+color:#fff6f6;
+
+}
+
+.balloon{
+
+position:absolute;
+
+bottom:-120px;
+
+width:70px;
+
+height:90px;
+
+border-radius:50%;
+
+animation:float 10s linear infinite;
+
+}
+
+.red{background:#ff3d6e;left:8%;animation-delay:0s;}
+
+.blue{background:#4fc3f7;left:28%;animation-delay:2s;}
+
+.pink{background:#ff80ab;left:50%;animation-delay:4s;}
+
+.yellow{background:#ffd54f;left:72%;animation-delay:1s;}
+
+.purple{background:#ba68c8;left:88%;animation-delay:3s;}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+}
+
+}
