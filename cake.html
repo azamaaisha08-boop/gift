@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cake ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="cakeBody">
+
+<h1>
+🎂 Happy Surprise My Bachaa ❤️
+</h1>
+
+<p>
+👇 Pehle Candle Par Tap Karo
+</p>
+
+<div id="cake">
+
+<div id="candle" onclick="blowCandle()">
+
+<div id="flame"></div>
+
+</div>
+
+<div class="top"></div>
+
+<div class="middle"></div>
+
+<div class="bottom"></div>
+
+</div>
+
+<p id="msg"></p>
+
+<button id="cutBtn" onclick="cutCake()">
+
+Cut Cake 🎂
+
+</button>
+
+<script>
+
+function blowCandle(){
+
+document.getElementById("flame").style.display="none";
+
+document.getElementById("msg").innerHTML="🎉 Ab Cake Cut Karo ❤️";
+
+document.getElementById("cutBtn").style.display="block";
+
+}
+
+
+function cutCake(){
+
+document.getElementById("cake").style.transform="rotate(-3deg)";
+
+document.body.style.background="#ff80ab";
+
+confetti();
+
+setTimeout(()=>{
+
+window.location.href="love.html";
+
+},3000);
+
+}
+
+
+function confetti(){
+
+for(let i=0;i<150;i++){
+
+let c=document.createElement("div");
+
+c.innerHTML="🎉";
+
+c.style.position="fixed";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.top="-20px";
+
+c.style.fontSize=(20+Math.random()*20)+"px";
+
+c.style.animation="fall 4s linear";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+
+c.remove();
+
+},4000);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
+.cakeBody{
+
+background:linear-gradient(135deg,#ff4d6d,#ff9a9e);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+color:white;
+
+overflow:hidden;
+
+}
+
+#cake{
+
+margin-top:30px;
+
+position:relative;
+
+cursor:pointer;
+
+transition:1s;
+
+}
+
+.top{
+
+width:220px;
+
+height:60px;
+
+background:#5d4037;
+
+border-radius:15px;
+
+}
+
+.middle{
+
+width:220px;
+
+height:60px;
+
+background:#8d6e63;
+
+}
+
+.bottom{
+
+width:220px;
+
+height:60px;
+
+background:#6d4c41;
+
+border-radius:0 0 15px 15px;
+
+}
+
+#candle{
+
+position:absolute;
+
+left:100px;
+
+top:-60px;
+
+width:20px;
+
+height:60px;
+
+background:white;
+
+}
+
+#flame{
+
+width:18px;
+
+height:25px;
+
+background:gold;
+
+border-radius:50%;
+
+animation:flicker .4s infinite alternate;
+
+}
+
+@keyframes flicker{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(.8);
+
+}
+
+}
+
+#cutBtn{
+
+display:none;
+
+margin-top:40px;
+
+padding:15px 40px;
+
+font-size:20px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ff0066;
+
+color:white;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(120vh);
+
+}
+
+}
