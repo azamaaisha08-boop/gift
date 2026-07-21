@@ -1,3 +1,4 @@
+<script src="effects.js"></script>
 // Floating Hearts
 
 setInterval(() => {
