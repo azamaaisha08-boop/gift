@@ -1,3 +1,4 @@
+<script src="effects.js"></script>
 // Loading Complete
 setTimeout(() => {
 document.getElementById("loading").style.display = "none";
