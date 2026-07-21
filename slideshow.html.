@@ -48,19 +48,9 @@ let photos=[
 
 let i=0;
 
-setInterval(()=>{
-
-i++;
-
-if(i>=photos.length){
-
-i=0;
-
-}
-
-document.getElementById("slide").src=photos[i];
-
-},4000);
+setTimeout(()=>{
+window.location.href="final.html";
+},25000);
 
 </script>
 
